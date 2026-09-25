@@ -122,7 +122,7 @@ const applyToOpportunity = (opportunity) => {
 
                 <br />
 
-                <button onClick={() => openOpportunity(item)}>
+                <button onClick={() => navigate("Recommendations")}>
   View & Apply
 </button>
               </div>
@@ -173,13 +173,16 @@ const applyToOpportunity = (opportunity) => {
   openOpportunity={openOpportunity}
 />
         )}
-        {page === "OpportunityDetails" && (
+
+{page === "OpportunityDetails" && (
   <OpportunityDetails
     opportunity={selectedOpportunity}
     onBack={goBackToRecommendations}
     onApply={applyToOpportunity}
   />
 )}
+        
+        
 
         {/* APPLICATIONS */}
         {page === "Applications" && (
@@ -400,7 +403,7 @@ function Recommendations({ navigate, openOpportunity }) {
             <div className="opportunity-right">
               <span className="match">{item.match} Match</span>
 
-              <button onClick={() => openOpportunity(item)}>
+        <button onClick={() => openOpportunity(item)}>
   View & Apply
 </button>
             </div>
