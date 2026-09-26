@@ -1,0 +1,10 @@
+backend/.env
+backend/node_modules/
+backend/dist/
+student-portal/node_modules/
+student-portal/dist/
+.agents/
+.claude/
+.cursor/
+.devin/
+*.log
